@@ -6,9 +6,12 @@
   "main": "./server/index.js",
   "scripts": {
     "start": "node -r esm server",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test:serial": "cd tests && npx playwright test --grep @Smoke --workers=1 --project=Chrome",
+    "test:single": "cd qa && npx playwright test --grep @Login --workers=1 login-logout.spec.ts --project=chromium --headed"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.3.1",
     "@hapi/boom": "^9.1.0",
     "@playwright/test": "^1.41.1",
     "bcrypt": "^5.0.1",
@@ -21,12 +24,12 @@
     "koa-swagger-generator-api": "^1.1.0",
     "mongodb": "^3.5.5",
     "mongoose": "^5.9.7",
-    "neat-csv": "^5.2.0",
-    "playwright": "^1.41.1"
+    "neat-csv": "^5.2.0"
   },
   "devDependencies": {
     "@moxy/eslint-config-base": "^12.0.0",
-    "@types/node": "^20.11.5",
+    "@types/node": "^20.11.6",
+    "consola": "^3.2.3",
     "eslint": "^6.8.0"
   }
 }
