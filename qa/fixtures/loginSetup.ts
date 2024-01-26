@@ -2,9 +2,9 @@ import { test as base } from '@playwright/test';
 import { request, expect  } from '@playwright/test';
 import { faker } from '@faker-js/faker'; 
 import { consola } from "consola";
-import { MainPage } from '../tests/ui/pageObjects/mainPage';
 
 export type docData = {
+    userId?: string;
     name?: string;
     email: string;
     password: string;
@@ -13,7 +13,7 @@ export type docData = {
 // Extend base test by providing
 // This new "test" can be used in multiple test files, and each of them will get the fixtures.
 export const testLoginFixture = base.extend({
-  loginSetup: async ({ page }, use) => {
+  loginSetup: async ({}, use) => {
     consola.start("Starting User creation...");
     if (!process.env.BASE_URL) {
       throw new Error("BASE_URL environment variable is not set")
@@ -40,12 +40,14 @@ export const testLoginFixture = base.extend({
     data: userData
   });
 
-  expect(newDoctor.ok()).toBeTruthy();
-  consola.success('User '+ userData.name +' created');
-  consola.success('Moving on to the Main Page');
-  const mainPage = await new MainPage(page).navigateToWebPage(process.env.BASE_URL);
+  const responseValue = await newDoctor.json();
+  userData.userId = responseValue._id;
 
-  await use({userData,mainPage});
+  expect(newDoctor.ok()).toBeTruthy();
+  
+  consola.success('User '+ userData.name +' created');
+
+  await use({userData});
   }
 });
 

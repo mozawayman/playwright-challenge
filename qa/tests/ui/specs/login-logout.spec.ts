@@ -7,23 +7,31 @@ import { LoggedInMainPage } from '../pageObjects/loggedInMainPage';
 
 test.describe('@LoginAndLogout tests', () => {
 
-  testLoginFixture('@Login User should be able to login successfully', async ({ page, loginSetup }) => {
-    const mainPageRef: MainPage = loginSetup.mainPage;
-    await mainPageRef.docLogin(loginSetup.userData);
+  testLoginFixture('@Login @ui User should be able to login successfully', async ({ page, loginSetup, baseURL  }) => {
+    if (!baseURL) {
+      throw new Error("BASE_URL environment variable is not set")
+    }
+    const mainPage = new MainPage(page);
+    mainPage.navigateToWebPage(baseURL);
+    await mainPage.docLogin(loginSetup.userData);
     const loggedInPageRef: LoggedInMainPage = new LoggedInMainPage(page);
     await expect(await loggedInPageRef.getLoginInfo()).toHaveText('Logged in as: ' + loginSetup.userData.name);
   });
   
-  testLoginFixture('@Logout User should be able to logout successfully', async ({ page, loginSetup }) => {
-    const mainPageRef: MainPage = loginSetup.mainPage;
-    await mainPageRef.docLogin(loginSetup.userData);
+  testLoginFixture('@Logout @ui User should be able to logout successfully', async ({ page, loginSetup, baseURL  }) => {
+    if (!baseURL) {
+      throw new Error("BASE_URL environment variable is not set")
+    }
+    const mainPage = new MainPage(page);
+    mainPage.navigateToWebPage(baseURL);
+    await mainPage.docLogin(loginSetup.userData);
     const loggedInPageRef: LoggedInMainPage = new LoggedInMainPage(page);
     await expect(await loggedInPageRef.getLoginInfo()).toHaveText('Logged in as: ' + loginSetup.userData.name);
-    await loggedInPageRef.logoutDoc(page);
-    await expect(await mainPageRef.getMainForm()).toHaveText('Please Login to review cases.');
+    await loggedInPageRef.logoutDoc();
+    await expect(await mainPage.getMainForm()).toHaveText('Please Login to review cases.');
   });
 
-  test('@FailedLogin Failed Login with Unregistered user', async ({ page, baseURL }) => {
+  test('@FailedLogin @ui Failed Login with Unregistered user', async ({ page, baseURL }) => {
     let userData: docData = 
       {
         'email': faker.internet.email(),

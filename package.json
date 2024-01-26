@@ -7,8 +7,10 @@
   "scripts": {
     "start": "node -r esm server",
     "lint": "eslint .",
-    "test:serial": "cd tests && npx playwright test --grep @Smoke --workers=1 --project=Chrome",
-    "test:single": "cd qa && npx playwright test --grep @Login --workers=1 login-logout.spec.ts --project=chromium --headed"
+    "test:login": "cd qa && npx playwright test --grep @Login --workers=1 --project=chromium",
+    "test:all": "cd qa && npx playwright test --workers=2 --project=chromium",
+    "test:ui": "cd qa && npx playwright test --grep @ui --workers=2 --project=chromium",
+    "test:api": "cd qa && npx playwright test --grep @api --workers=2 --project=chromium"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
