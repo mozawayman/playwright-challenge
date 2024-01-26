@@ -1,36 +1,78 @@
-import { APIResponse, expect } from '@playwright/test';
+import { APIRequestContext, APIResponse, expect, request } from '@playwright/test';
+import path from 'path';
+import { consola } from 'consola';
+import { Item, JsonHelper } from './json-helpers';
+
 
 export class APIActions {
 
+    /**
+     * Return positive assertion on the http 200-299 range 
+     * @param response 
+     */
     async verifyStatusCode(response: APIResponse): Promise<void> {
-        await expect(response, `200 Status code was not displayed.`).toBeOK();
+        expect(response.ok()).toBeTruthy();
     }
 
-    async verifyResponseBody(expectedResponseBodyParams: string, responsePart: JSON, responseType: string): Promise<void> {
+    /**
+     * Verify reponse parameters agaisn a list of fields
+     * @param expectedResponseBodyParams 
+     * @param responsePart 
+     */
+    async verifyResponseBodyParams(expectedResponseBodyParams: string[], responsePart: JSON): Promise<void> {
         let status = true;
         let fieldNames = `Parameter`;
-        const headers = expectedResponseBodyParams.split("|");
         const responseToString = JSON.stringify(responsePart).trim();
-        for (let headerKey of headers) {
+        for (let headerKey of expectedResponseBodyParams) {
             if (!(responseToString.includes(headerKey.trim()))) {
                 status = false;
                 fieldNames = fieldNames + `, ` + headerKey;
                 break;
             }
         }
-        expect(status, `${fieldNames} was not present in ${responseType}`).toBe(true);
+        expect(status, `${fieldNames} was not present in the response body`).toBe(true);
     }
 
-    async verifyResponseHeader(expectedResponseHeaderParams: string, responsePart: Array<{ name: string, value: string }>, responseType: string): Promise<void> {
-        let status = true;
-        let fieldNames = `Parameter`;
-        for (let responseKey of responsePart) {
-            if (!(expectedResponseHeaderParams.includes(responseKey.name.trim()))) {
-                status = false;
-                fieldNames = fieldNames + ' ,' + responseKey.name;
-                break;
+    /**
+     * Blueprint for all API requests
+     * @param method 
+     * @param endpoint 
+     * @param body 
+     * @returns 
+     */
+    async requestSetup( method: string, endpoint:string, body?: object): Promise<APIResponse> {
+        consola.start('Setting up ' +method+ ' request for ' +endpoint+ '...');
+        const apiRequestContext: APIRequestContext = await request.newContext();
+        const res = await apiRequestContext[method](endpoint, {
+            headers: {
+                'Accept': 'application/json',
+                'Content-type': 'application/json',
+                },
+                data: body,
+            });
+            consola.success('Done!');
+          return res;
+    }
+
+
+    /**
+     * compares body with ground truth file
+     * @param method 
+     * @param endpoint 
+     * @param body 
+     * @returns 
+     */
+    async checkResponseAgainstFileRef(body: Item[], filePath:string): Promise<Boolean> {
+        // Read the array from the file
+        let fileArray: Item[] = JsonHelper.readFromFile(path.resolve(__dirname, filePath));
+        if (fileArray.length !== body.length) {
+            return false;
+        }
+        for (let i = 0; i < fileArray.length; i++) {
+            if (body[i].code !== fileArray[i].code || body[i].description !== fileArray[i].description) {
+              return false;
             }
         }
-        expect(status, `${fieldNames} was not present in ${responseType}`).toBe(true);
+        return true;
     }
 }

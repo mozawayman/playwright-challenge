@@ -1,0 +1,612 @@
+[
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9a",
+      "code": "A09",
+      "description": "Infectious gastroenteritis and colitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9b",
+      "code": "A64",
+      "description": "Unspecified sexually transmitted disease"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9c",
+      "code": "B300",
+      "description": "Keratoconjunctivitis due to adenovirus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9d",
+      "code": "B302",
+      "description": "Viral pharyngoconjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9e",
+      "code": "B308",
+      "description": "Other viral conjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcf9f",
+      "code": "B309",
+      "description": "Viral conjunctivitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa0",
+      "code": "B373",
+      "description": "Candidiasis of vulva and vagina"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa1",
+      "code": "B9789",
+      "description": "Other viral agents as the cause of diseases classified elsewhere"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa2",
+      "code": "E860",
+      "description": "Dehydration"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa3",
+      "code": "F340",
+      "description": "Cyclothymic disorder"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa4",
+      "code": "F341",
+      "description": "Dysthymic disorder"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa5",
+      "code": "F39",
+      "description": "Unspecified mood [affective] disorder"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa6",
+      "code": "F411",
+      "description": "Generalized anxiety disorder"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa7",
+      "code": "F418",
+      "description": "Other specified anxiety disorders"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa8",
+      "code": "F419",
+      "description": "Anxiety disorder, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfa9",
+      "code": "F4321",
+      "description": "Adjustment disorder with depressed mood"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfaa",
+      "code": "G43001",
+      "description": "Migraine without aura, not intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfab",
+      "code": "G43009",
+      "description": "Migraine without aura, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfac",
+      "code": "G43019",
+      "description": "Migraine without aura, intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfad",
+      "code": "G43501",
+      "description": "Persistent migraine aura without cerebral infarction, not intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfae",
+      "code": "G43509",
+      "description": "Persistent migraine aura without cerebral infarction, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfaf",
+      "code": "G43519",
+      "description": "Persistent migraine aura without cerebral infarction, intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb0",
+      "code": "G43701",
+      "description": "Chronic migraine without aura, not intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb1",
+      "code": "G43709",
+      "description": "Chronic migraine without aura, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb2",
+      "code": "G43711",
+      "description": "Chronic migraine without aura, intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb3",
+      "code": "G43719",
+      "description": "Chronic migraine without aura, intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb4",
+      "code": "G43809",
+      "description": "Other migraine, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb5",
+      "code": "G43811",
+      "description": "Other migraine, intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb6",
+      "code": "G43819",
+      "description": "Other migraine, intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb7",
+      "code": "G43829",
+      "description": "Menstrual migraine, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb8",
+      "code": "G43909",
+      "description": "Migraine, unspecified, not intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfb9",
+      "code": "G43911",
+      "description": "Migraine, unspecified, intractable, with status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfba",
+      "code": "G43919",
+      "description": "Migraine, unspecified, intractable, without status migrainosus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfbb",
+      "code": "G44209",
+      "description": "Tension-type headache, unspecified, not intractable"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfbc",
+      "code": "G44219",
+      "description": "Episodic tension-type headache, not intractable"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfbd",
+      "code": "G4700",
+      "description": "Insomnia, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfbe",
+      "code": "G4701",
+      "description": "Insomnia due to medical condition"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfbf",
+      "code": "G5600",
+      "description": "Carpal tunnel syndrome, unspecified upper limb"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc0",
+      "code": "H10029",
+      "description": "Other mucopurulent conjunctivitis, unspecified eye"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc1",
+      "code": "H1033",
+      "description": "Unspecified acute conjunctivitis, bilateral"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc2",
+      "code": "H1044",
+      "description": "Vernal conjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc3",
+      "code": "H1045",
+      "description": "Other chronic allergic conjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc4",
+      "code": "H10509",
+      "description": "Unspecified blepharoconjunctivitis, unspecified eye"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc5",
+      "code": "H10819",
+      "description": "Pingueculitis, unspecified eye"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc6",
+      "code": "H1089",
+      "description": "Other conjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc7",
+      "code": "H109",
+      "description": "Unspecified conjunctivitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc8",
+      "code": "H6020",
+      "description": "Malignant otitis externa, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfc9",
+      "code": "H60339",
+      "description": "Swimmer's ear, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfca",
+      "code": "H60399",
+      "description": "Other infective otitis externa, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfcb",
+      "code": "H6500",
+      "description": "Acute serous otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfcc",
+      "code": "H65119",
+      "description": "Acute and subacute allergic otitis media (mucoid) (sanguinous) (serous), unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfcd",
+      "code": "H65199",
+      "description": "Other acute nonsuppurative otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfce",
+      "code": "H6520",
+      "description": "Chronic serous otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfcf",
+      "code": "H65499",
+      "description": "Other chronic nonsuppurative otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd0",
+      "code": "H6590",
+      "description": "Unspecified nonsuppurative otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd1",
+      "code": "H66009",
+      "description": "Acute suppurative otitis media without spontaneous rupture of ear drum, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd2",
+      "code": "H66019",
+      "description": "Acute suppurative otitis media with spontaneous rupture of ear drum, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd3",
+      "code": "H663X9",
+      "description": "Other chronic suppurative otitis media, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd4",
+      "code": "H6640",
+      "description": "Suppurative otitis media, unspecified, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd5",
+      "code": "H6690",
+      "description": "Otitis media, unspecified, unspecified ear"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd6",
+      "code": "J00",
+      "description": "Acute nasopharyngitis [common cold]"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd7",
+      "code": "J0100",
+      "description": "Acute maxillary sinusitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd8",
+      "code": "J0110",
+      "description": "Acute frontal sinusitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfd9",
+      "code": "J0130",
+      "description": "Acute sphenoidal sinusitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfda",
+      "code": "J0140",
+      "description": "Acute pansinusitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfdb",
+      "code": "J0190",
+      "description": "Acute sinusitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfdc",
+      "code": "J029",
+      "description": "Acute pharyngitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfdd",
+      "code": "J060",
+      "description": "Acute laryngopharyngitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfde",
+      "code": "J069",
+      "description": "Acute upper respiratory infection, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfdf",
+      "code": "J209",
+      "description": "Acute bronchitis, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe0",
+      "code": "J301",
+      "description": "Allergic rhinitis due to pollen"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe1",
+      "code": "J3081",
+      "description": "Allergic rhinitis due to animal (cat) (dog) hair and dander"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe2",
+      "code": "J36",
+      "description": "Peritonsillar abscess"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe3",
+      "code": "J40",
+      "description": "Bronchitis, not specified as acute or chronic"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe4",
+      "code": "J411",
+      "description": "Mucopurulent chronic bronchitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe5",
+      "code": "J42",
+      "description": "Unspecified chronic bronchitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe6",
+      "code": "J45901",
+      "description": "Unspecified asthma with (acute) exacerbation"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe7",
+      "code": "J45902",
+      "description": "Unspecified asthma with status asthmaticus"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe8",
+      "code": "K210",
+      "description": "Gastro-esophageal reflux disease with esophagitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfe9",
+      "code": "K219",
+      "description": "Gastro-esophageal reflux disease without esophagitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfea",
+      "code": "K2900",
+      "description": "Acute gastritis without bleeding"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfeb",
+      "code": "K2920",
+      "description": "Alcoholic gastritis without bleeding"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfec",
+      "code": "K2960",
+      "description": "Other gastritis without bleeding"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfed",
+      "code": "K5900",
+      "description": "Constipation, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfee",
+      "code": "K5901",
+      "description": "Slow transit constipation"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfef",
+      "code": "K5902",
+      "description": "Outlet dysfunction constipation"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff0",
+      "code": "K649",
+      "description": "Unspecified hemorrhoids"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff1",
+      "code": "K8019",
+      "description": "Calculus of gallbladder with other cholecystitis with obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff2",
+      "code": "K8020",
+      "description": "Calculus of gallbladder without cholecystitis without obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff3",
+      "code": "K8021",
+      "description": "Calculus of gallbladder without cholecystitis with obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff4",
+      "code": "K8042",
+      "description": "Calculus of bile duct with acute cholecystitis without obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff5",
+      "code": "K8050",
+      "description": "Calculus of bile duct without cholangitis or cholecystitis without obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff6",
+      "code": "K8051",
+      "description": "Calculus of bile duct without cholangitis or cholecystitis with obstruction"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff7",
+      "code": "L240",
+      "description": "Irritant contact dermatitis due to detergents"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff8",
+      "code": "L242",
+      "description": "Irritant contact dermatitis due to solvents"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcff9",
+      "code": "L250",
+      "description": "Unspecified contact dermatitis due to cosmetics"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcffa",
+      "code": "L251",
+      "description": "Unspecified contact dermatitis due to drugs in contact with skin"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcffb",
+      "code": "L253",
+      "description": "Unspecified contact dermatitis due to other chemical products"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcffc",
+      "code": "L255",
+      "description": "Unspecified contact dermatitis due to plants, except food"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcffd",
+      "code": "L259",
+      "description": "Unspecified contact dermatitis, unspecified cause"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcffe",
+      "code": "M25539",
+      "description": "Pain in unspecified wrist"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fcfff",
+      "code": "M5430",
+      "description": "Sciatica, unspecified side"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd000",
+      "code": "N730",
+      "description": "Acute parametritis and pelvic cellulitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd001",
+      "code": "N733",
+      "description": "Female acute pelvic peritonitis"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd002",
+      "code": "N739",
+      "description": "Female pelvic inflammatory disease, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd003",
+      "code": "N912",
+      "description": "Amenorrhea, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd004",
+      "code": "N920",
+      "description": "Excessive and frequent menstruation with regular cycle"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd005",
+      "code": "N921",
+      "description": "Excessive and frequent menstruation with irregular cycle"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd006",
+      "code": "N924",
+      "description": "Excessive bleeding in the premenopausal period"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd007",
+      "code": "N930",
+      "description": "Postcoital and contact bleeding"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd008",
+      "code": "N946",
+      "description": "Dysmenorrhea, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd009",
+      "code": "R079",
+      "description": "Chest pain, unspecified"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00a",
+      "code": "R109",
+      "description": "Unspecified abdominal pain"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00b",
+      "code": "R21",
+      "description": "Rash and other nonspecific skin eruption"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00c",
+      "code": "R42",
+      "description": "Dizziness and giddiness"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00d",
+      "code": "S53449A",
+      "description": "Ulnar collateral ligament sprain of unspecified elbow, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00e",
+      "code": "S63519A",
+      "description": "Sprain of carpal joint of unspecified wrist, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd00f",
+      "code": "S63599A",
+      "description": "Other specified sprain of unspecified wrist, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd010",
+      "code": "S638X9A",
+      "description": "Sprain of other part of unspecified wrist and hand, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd011",
+      "code": "S93419A",
+      "description": "Sprain of calcaneofibular ligament of unspecified ankle, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd012",
+      "code": "S93429A",
+      "description": "Sprain of deltoid ligament of unspecified ankle, initial encounter"
+    },
+    {
+      "_id": "65b3f1fb0a391e1e082fd013",
+      "code": "S93439A",
+      "description": "Sprain of tibiofibular ligament of unspecified ankle, initial encounter"
+    }
+  ]

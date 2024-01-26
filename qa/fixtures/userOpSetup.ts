@@ -6,18 +6,13 @@ import { consola } from "consola";
 // Setup for the user interaction tests
 export const LoadUpPreConditions = base.extend({
   caseSetup: async ({}, use) => {
-    if (!process.env.BASE_URL) {
-      throw new Error("BASE_URL environment variable is not set")
-    }
     // Set up the fixture.
     // Create a context that will issue http requests.
-  const context = await request.newContext({
-    baseURL: process.env.BASE_URL,
-  });
+  const context = await request.newContext({});
 
     // Afterall delete cases
     consola.start('Cleaning any cases leftovers');
-    const deleteCases1 = await context.post('/cases', {
+    await context.post('/cases', {
       headers: {
         'Accept': 'application/json',
       },
@@ -51,7 +46,7 @@ export const LoadUpPreConditions = base.extend({
 
   // Afterall delete cases
   consola.start("Importing conditions...");
-  const deleteCases2 = await context.post('/cases', {
+  await context.post('/cases', {
     headers: {
       'Accept': 'application/json',
     },

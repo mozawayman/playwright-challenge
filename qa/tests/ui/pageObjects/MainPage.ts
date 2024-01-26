@@ -18,10 +18,9 @@ export class MainPage {
         this.INVALID_LOGIN_DIALOG = this.page.locator('.swal2-popup');
     }
 
-    async navigateToWebPage(baseUrl: string): Promise<MainPage>{
+    async navigateToWebPage(baseUrl: string){
         // Navigate to the web page
         await this.page.goto(baseUrl);
-        return this;
     }
 
     async docLogin(docData: docData) {

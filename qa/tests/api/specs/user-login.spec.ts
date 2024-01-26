@@ -1,54 +1,50 @@
-// import { test, request, expect  } from '@playwright/test';
-// import { consola } from "consola";
+import { test, request, expect  } from '@playwright/test';
+import { APIActions } from '../utils/api-helpers';
+import { faker } from '@faker-js/faker';
+import { docData } from '../../../fixtures/loginSetup';
 
+  const apiActions = new APIActions();
 
-// test.beforeAll(async ({ request }) => {
-//     // Create a new repository
-//     const response = await request.post('/user/repos', {
-//       data: {
-//         name: REPO
-//       }
-//     });
-//     expect(response.ok()).toBeTruthy();
-//   });
+  test.describe('@UserApi @API Register and Login User', () => {
 
-//   import { APIActions } from '@lib/APIActions';
-//   import { test } from '@playwright/test';
-  
-//   const apiActions = new APIActions();
-  
-//   test(`@API getUsers`, async ({ request }) => {
-//       const response = await request.get(`/api/users?per_page=1`);
-//       await apiActions.verifyStatusCode(response);
-  
-//       //* Body Response Params and Body Response Headers are stored in single text file separated by #
-//       const responseBodyParams = (await apiActions.readValuesFromTextFile(`getUsers`)).split(`#`)[0];
-//       await apiActions.verifyResponseBody(responseBodyParams, await response.json(), `Response Body`);
-  
-//       const responseBodyHeaders = (await apiActions.readValuesFromTextFile(`getUsers`)).split(`#`)[1];
-//       await apiActions.verifyResponseHeader(responseBodyHeaders, response.headersArray(), `Response Headers`);
-//   });
-  
-//   test('should create a feature request', async ({ request }) => {
-//     const newIssue = await request.post(`/repos/${USER}/${REPO}/issues`, {
-//       data: {
-//         title: '[Feature] request 1',
-//         body: 'Feature description',
-//       }
-//     });
-//     expect(newIssue.ok()).toBeTruthy();
-  
-//     const issues = await request.get(`/repos/${USER}/${REPO}/issues`);
-//     expect(issues.ok()).toBeTruthy();
-//     expect(await issues.json()).toContainEqual(expect.objectContaining({
-//       title: '[Feature] request 1',
-//       body: 'Feature description'
-//     }));
-//   });
+    test(`@API Register a new User`, async ({}) => {
+        
+        const userRegisterFields: string[] = ['_id', 'name', 'email', 'password', '__v'];
 
-  
-//   test.afterAll(async ({ request }) => {
-//     // Delete the repository
-//     const response = await request.delete(`/repos/${USER}/${REPO}`);
-//     expect(response.ok()).toBeTruthy();
-//   });
+        const userData: docData = 
+        {
+        'name': faker.internet.userName(),
+        'email': faker.internet.email(),
+        'password': faker.internet.password()
+        };
+
+        const response = await apiActions.requestSetup('post','/users/register',userData);
+        await apiActions.verifyStatusCode(response);
+        await apiActions.verifyResponseBodyParams(userRegisterFields, await response.json());
+    });
+
+    test(`@API Login with freshly created user`, async ({}) => {
+        
+        const userloginFields: string[] = ['id', 'name', 'email'];
+
+        const userData: docData = 
+        {
+        'name': faker.internet.userName(),
+        'email': faker.internet.email(),
+        'password': faker.internet.password()
+        };
+
+        await apiActions.requestSetup('post','/users/register',userData);
+        
+        const userToLoginData: docData = 
+        {
+        'email': userData.email,
+        'password': userData.password
+        };
+
+        const loginResponse = await apiActions.requestSetup('post','/users/login',userToLoginData);
+
+        await apiActions.verifyStatusCode(loginResponse);
+        await apiActions.verifyResponseBodyParams(userloginFields, await loginResponse.json());
+    });
+  });

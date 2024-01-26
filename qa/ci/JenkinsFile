@@ -1,0 +1,37 @@
+pipeline {
+    options {
+        timeout(time: 90, unit: 'MINUTES')
+    }
+    agent { dockerfile true }
+    stages {
+            stage('Install&Build Project') {
+                steps {
+                    // Prints Environment variables
+                    sh 'printenv'
+                    // Prints current user
+                    sh 'whoami'
+                    // Clean Install
+                    sh 'npm ci'
+                }
+            }
+            stage('Running tests on Chromium') {
+                steps {               
+                    script {
+                        echo "Running Tests for CHROME!!"
+                        sh "npx playwright test --workers=2 --project=chromium"
+                    }
+                }
+                post {
+                    always {
+                        publishHTML target: [
+                            allowMissing: false,
+                            alwaysLinkToLastBuild: true,
+                            keepAll: true,
+                            reportDir: "${workspace}/my-report/",
+                            reportFiles: 'index.html',
+                            reportName: "Test Report Chrome Dekstop"]
+                    }
+                }
+            }
+    }
+}

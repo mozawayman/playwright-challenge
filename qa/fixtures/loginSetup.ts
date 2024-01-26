@@ -15,14 +15,9 @@ export type docData = {
 export const testLoginFixture = base.extend({
   loginSetup: async ({}, use) => {
     consola.start("Starting User creation...");
-    if (!process.env.BASE_URL) {
-      throw new Error("BASE_URL environment variable is not set")
-    }
     // Set up the fixture.
     // Create a context that will issue http requests.
-  const context = await request.newContext({
-    baseURL: process.env.BASE_URL,
-  });
+  const context = await request.newContext({});
 
   let userData: docData = 
     {

@@ -12,7 +12,7 @@ test.describe('@LoginAndLogout tests', () => {
       throw new Error("BASE_URL environment variable is not set")
     }
     const mainPage = new MainPage(page);
-    mainPage.navigateToWebPage(baseURL);
+    await mainPage.navigateToWebPage(baseURL);
     await mainPage.docLogin(loginSetup.userData);
     const loggedInPageRef: LoggedInMainPage = new LoggedInMainPage(page);
     await expect(await loggedInPageRef.getLoginInfo()).toHaveText('Logged in as: ' + loginSetup.userData.name);
@@ -23,7 +23,7 @@ test.describe('@LoginAndLogout tests', () => {
       throw new Error("BASE_URL environment variable is not set")
     }
     const mainPage = new MainPage(page);
-    mainPage.navigateToWebPage(baseURL);
+    await mainPage.navigateToWebPage(baseURL);
     await mainPage.docLogin(loginSetup.userData);
     const loggedInPageRef: LoggedInMainPage = new LoggedInMainPage(page);
     await expect(await loggedInPageRef.getLoginInfo()).toHaveText('Logged in as: ' + loginSetup.userData.name);
