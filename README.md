@@ -53,10 +53,24 @@ Keep in mind that all the written/implemented tests and validations should be po
 
 If you wish to, you can suggest or even implement small refactors/tweaks to make the source code more testable. The same is valid for all the bugs you may find.
 
-## Delivery format
+## Automation Documentation
 
-1. Mirror the contents of this project to a personal private repository (do not fork this one, as your work will be readable by all other candidates).
+In "/qa" directory is present most of the work developed for the challenge. It uses playwright has browser automation and test management library, exploring different patterns for different scenarios.
 
-2. Perform all the changes of your choice to reach the goal of the assignment.
+- /qa
+    - .github --> directory with Actions workflow defined
+    - ci --> directory with a jenkins pipeline defined
+    - fixtures --> holds code for test fixtures
+    - tests --> Has all files with test code and support code
 
-3. Once you have finished working on it, reply to the challenge presentation e-mail you received (the one with the link to this repository) and include the result of your work in attachment.
+
+### To run the all suite on docker
+```bash
+# generate the image
+
+docker build -t my-playwright-image --file "qa/Dockerfile" .
+
+# run the image
+
+docker run --network="host" my-playwright-image
+```
